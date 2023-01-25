@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 
 namespace Logger
 {
@@ -44,4 +45,4 @@ namespace Logger
             logger.Log(LogLevel.Warning, string.Format(message, args));
         }
     }
-}
+    }

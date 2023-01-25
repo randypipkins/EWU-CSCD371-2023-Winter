@@ -1,7 +1,10 @@
-﻿namespace Logger
+namespace Logger;
+
+public class LogFactory
 {
-    public class LogFactory
+    public BaseLogger CreateLogger(string className)
     {
+
 
         private string _path;
         public BaseLogger CreateLogger(string className)
@@ -19,5 +22,9 @@
         {
             _path = path;
         }
+
+        
+        return null;
+
     }
 }

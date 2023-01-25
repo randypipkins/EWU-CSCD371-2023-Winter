@@ -10,7 +10,11 @@ Read **Chapters 4-6** with an **especially careful read of Chapter 6**. Pay spec
 
 ## Assignment
 
+
 - There is an existing `BaseLogger` class. It needs an **auto property** to hold the class name. This property should be set in the `LogFactory` using an **object initializer**. ✔
+
+- There is an existing `BaseLogger` class. It needs an **auto property** to hold a class name. This property should be set in the `LogFactory` using an **object initializer**. ❌✔
+
 - Create a `FileLogger` that derives from `BaseLogger`. It should take in a path to a file to write the log message to. When its `Log` method is called, it should **append** messages on their own line in the file. The output should include all of the following:
   - The current date/time ✔
   - The name of the class that created the logger ✔
@@ -25,17 +29,27 @@ Read **Chapters 4-6** with an **especially careful read of Chapter 6**. Pay spec
   - `Information`, and ✔
   - `Debug`. ✔
   Each of these methods should take in a `string` for the message, as well as a **parameter array** of arguments for the message. Each of these extension methods is expected to be a shortcut for calling the `BaseLogger.Log` method, by automatically supplying the appropriate `LogLevel`. These methods should throw an exception if the `BaseLogger` parameter is null. There are a couple example unit tests to get you started.
+
 - Use the nameof() operator when identifying the class name to the logger ✔
 - Ensure you turn on Warnings as Errors (TreatWarningsAsErrors) ✔
 - Ensure that you turn on code analysis (EnableNETAnalyzers) ✔
 - Ensure that you turn on CodeAnalysisTreatWarningsAsErrors ✔
 - Set `LangVersion` to 11.0 ✔
 - Turn on Nullability (`Nullable`) ✔
+
+- Use the nameof() operator when identifying the class name to the logger ❌✔
+- Ensure you turn on Warnings as Errors (TreatWarningsAsErrors) ❌✔
+- Ensure that you turn on code analysis (EnableNETAnalyzers) ❌✔
+- Ensure that you turn on CodeAnalysisTreatWarningsAsErrors ❌✔
+- Set `LangVersion` and the `TargetFramework` to the latest released versions available (preview versions optional) ❌✔
+- Turn on Nullability (`Nullable`) ❌✔
+
 - **All of the above should be unit tested.**
 
 ## Extra Credit
 
 - Implement an additional logger. This logger must be unit tested. Some options to consider could be one that uses `System.Console` or `System.Diagnostics.Trace` ❌✔
+- Implement the factory pattern using static abstract methods on a Logger interface instead.
 
 ## Relevant APIs to know about
 

@@ -1,9 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
 
-namespace Logger.Tests
+namespace Logger.Tests;
+
+[TestClass]
+public class FileLoggerTests
 {
+
     [TestClass]
     public class FileLoggerTests
     {

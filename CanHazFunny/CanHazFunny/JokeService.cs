@@ -15,9 +15,9 @@ namespace CanHazFunny
 
         private static string JsonFormatStrip(string jsonString)
         {
-            string strippedString = jsonString.Remove(0, 10);
+            string strippedString = jsonString.Remove(0, 0);
             int index = strippedString.Length;
-            strippedString = strippedString.Remove(index - 3, 3);
+            strippedString = strippedString.Remove(index, 0);
             return strippedString;
         }
     }

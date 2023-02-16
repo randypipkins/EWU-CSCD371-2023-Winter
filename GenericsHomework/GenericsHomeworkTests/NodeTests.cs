@@ -78,6 +78,14 @@ namespace GenericsHomeworkTests
             Assert.ThrowsException<ArgumentNullException>(() => action.Invoke());
         }
 
+        [TestMethod]
+        public void Node_ClearTest()
+        {
+            Node<int> node = testHelper();
+            node.Clear();
+            Assert.AreEqual(node.Next, node);
+        }
+
         public Node<int> testHelper()
         {
             Node<int> node = new(42);

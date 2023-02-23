@@ -14,11 +14,16 @@ public class Program
         init;
     } = () => Console.ReadLine();
 
+    public Program()
+    {
+
+    }
+
     static void Main()
     {
         Program program = new();
-        Calculator calculator = new();
         bool done = false;
+        Calculator calc = new Calculator();
 
         program.WriteLine("Please Enter a Single-Operation Calculation" +
             "Typing exit will end the program. \n");
@@ -30,7 +35,7 @@ public class Program
             {
                 done = true;
             }
-            else if(input != null && Calculator.TryCalculate(input, out double output))
+            else if(input != null && calc.TryCalculate(input, out double output))
             {
                 program.WriteLine($"Answer: {output}");
                 program.WriteLine("Please enter a new equation or exit: ");

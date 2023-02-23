@@ -6,13 +6,14 @@ public class ProgramTests
     [TestMethod]
     public void TestWriteLine()
     {
-        StringWriter expected = new();
+        StringWriter sw = new();
 
-        Console.SetOut(expected);
+        Console.SetOut(sw);
         Program program = new();
         program.WriteLine("test");
+        string expected = sw.ToString().Trim();
 
-        Assert.AreEqual("test", expected.ToString().Trim());
+        Assert.AreEqual<string>("test", expected);
     }
 
     [TestMethod]

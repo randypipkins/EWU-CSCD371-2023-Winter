@@ -48,7 +48,7 @@ public class CalculatorTests
         String input = "1 + 1";
         double output;
         double expected = 2;
-        bool isTrue = Calculator.TryCalculate(input, out output);
+        bool isTrue = calculator.TryCalculate(input, out output);
         Assert.IsTrue(isTrue);
         Assert.AreEqual<double>(expected, output);
     }
@@ -59,7 +59,7 @@ public class CalculatorTests
         String input = "2 - 1";
         double output;
         double expected = 1;
-        bool isTrue = Calculator.TryCalculate(input, out output);
+        bool isTrue = calculator.TryCalculate(input, out output);
         Assert.IsTrue(isTrue);
         Assert.AreEqual<double>(expected, output);
     }
@@ -70,7 +70,7 @@ public class CalculatorTests
         String input = "1 / 1";
         double output;
         double expected = 1;
-        bool isTrue = Calculator.TryCalculate(input, out output);
+        bool isTrue = calculator.TryCalculate(input, out output);
         Assert.IsTrue(isTrue);
         Assert.AreEqual<double>(expected, output);
     }
@@ -81,7 +81,7 @@ public class CalculatorTests
         String input = "1 * 1";
         double output;
         double expected = 1;
-        bool isTrue = Calculator.TryCalculate(input, out output);
+        bool isTrue = calculator.TryCalculate(input, out output);
         Assert.IsTrue(isTrue);
         Assert.AreEqual<double>(expected, output);
     }

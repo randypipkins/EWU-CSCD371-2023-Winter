@@ -41,7 +41,7 @@ public class Calculator
         }
     };
 
-    public static bool TryCalculate(string input, out double output)
+    public bool TryCalculate(string input, out double output)
     {
         output = 0;
         bool canCalculate = false;
